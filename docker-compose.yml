@@ -7,5 +7,6 @@ services:
       dockerfile: Dockerfile
     image: my-lisp-environment
     volumes:
-      - ./codegrader:/root/quicklisp/local-projects/codegrader
+      - ./src:/home/user/src
+      - ./codegrader:/home/user/codegrader
     tty: true
