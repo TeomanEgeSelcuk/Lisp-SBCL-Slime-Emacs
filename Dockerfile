@@ -17,7 +17,8 @@ RUN apt-get install -y \
     sudo \
     make \
     zlib1g-dev \
-    emacs
+    emacs \
+    sbcl
 
 # grant sudo rights to `user`
 RUN echo "user:user" | chpasswd && adduser user sudo
@@ -37,7 +38,6 @@ RUN git clone https://github.com/gwangjinkim/.emacs.d.git /home/user/.emacs.d
 # Download Roswell
 RUN curl -sOL $(curl -s https://api.github.com/repos/roswell/roswell/releases/latest | grep browser_download_url | cut -d '"' -f 4 | grep 'roswell_' | grep 'amd64.deb')
 
-
 # Install Roswell
 RUN sudo dpkg -i roswell*.deb
 RUN rm roswell*.deb
@@ -50,6 +50,22 @@ ENV PATH=$PATH:/home/user/.roswell/bin
 
 # Install SLIME using Roswell
 RUN ros install slime 2.26.1
+
+# Download Quicklisp
+RUN curl -O https://beta.quicklisp.org/quicklisp.lisp
+
+# Install Quicklisp
+RUN sbcl --load quicklisp.lisp --eval "(quicklisp-quickstart:install)" --quit
+
+# Load Quicklisp in the user's environment
+RUN sbcl --load ~/quicklisp/setup.lisp --eval "(ql:add-to-init-file)" --quit
+
+# Clone codegrader repository into quicklisp/local-projects
+RUN cd ~/quicklisp/local-projects && git clone https://github.com/marcus3santos/codegrader.git
+
+# Edit .sbclrc and add quickload lines
+RUN echo "(ql:quickload :rutils)" >> ~/.sbclrc
+RUN echo "(ql:quickload :codegrader)" >> ~/.sbclrc
 
 # Expose the port for SLIME if needed
 # EXPOSE 4005
