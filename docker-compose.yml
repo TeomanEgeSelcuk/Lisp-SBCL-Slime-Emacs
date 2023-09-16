@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  lisp-environment:
+    container_name: lisp-dev-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-lisp-environment
+    volumes:
+      - ./src:/src
+    tty: true
