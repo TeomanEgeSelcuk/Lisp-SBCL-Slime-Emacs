@@ -7,6 +7,5 @@ services:
       dockerfile: Dockerfile
     image: my-lisp-environment
     volumes:
-      - ./src:/home/user/src
-      - ./codegrader:/home/user/codegrader
+      - ./src:/src
     tty: true
