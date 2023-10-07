@@ -37,7 +37,7 @@ def stop_and_remove_container_from_compose(compose_file):
 compose_file = Path("docker-compose.yml")  # Creating a `Path` object for the Docker Compose file path
 # Set to 1 to start the containers, 2 to stop and remove then start the Containers from Docker Compose
 # Any other number to remove the container
-start = 2 
+start = 1
 
 if start == 1:
     start_container_from_compose(compose_file)  # Calling the function to start the containers
