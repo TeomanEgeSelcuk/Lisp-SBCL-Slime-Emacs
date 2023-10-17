@@ -10,5 +10,5 @@
         (t "F")))
 
 ; Example usage:
-(let ((percentage 44)) ; Change the percentage as needed
-  (format t "Grade: ~a~%" (GRADE percentage)))
+; (let ((percentage 44)) ; Change the percentage as needed
+;   (format t "Grade: ~a~%" (GRADE percentage)))

@@ -1,0 +1,253 @@
+[[questions]]
+question = "What will be the output of the following Lisp expression: `(+ 5 (* 3 2))`?"
+choices = [
+  "11",
+  "16",
+  "21",
+  "None of the above"
+]
+# Answer: Choice 1 (11)
+
+[[questions]]
+question = "How do you represent the square root of 9 in Lisp?"
+choices = [
+  "(sqrt 9)",
+  "sqrt(9)",
+  "9^0.5",
+  "None of the above"
+]
+# Answer: Choice 1 (sqrt 9)
+
+[[questions]]
+question = "Which Lisp function is used to raise a number to a power?"
+choices = [
+  "power",
+  "raise",
+  "expt",
+  "None of the above"
+]
+# Answer: Choice 3 (expt)
+
+[[questions]]
+question = "What will the following Lisp code return: `(/ 10 3)`?"
+choices = [
+  "3",
+  "3.33",
+  "3.3333333",
+  "None of the above"
+]
+# Answer: Choice 3 (3.3333333)
+
+[[questions]]
+question = "What is the result of the Lisp expression `(- 5 3 1)`?"
+choices = [
+  "1",
+  "3",
+  "-1",
+  "None of the above"
+]
+# Answer: Choice 1 (1)
+
+[[questions]]
+question = "How is the Boolean AND operation represented in Lisp?"
+choices = [
+  "and",
+  "&&",
+  "&",
+  "None of the above"
+]
+# Answer: Choice 1 (and)
+
+[[questions]]
+question = "Which Lisp function returns the remainder of the division of two numbers?"
+choices = [
+  "mod",
+  "remainder",
+  "residue",
+  "None of the above"
+]
+# Answer: Choice 2 (remainder)
+
+[[questions]]
+question = "What does the Lisp expression `(= 5 5)` return?"
+choices = [
+  "True",
+  "False",
+  "1",
+  "None of the above"
+]
+# Answer: Choice 1 (True)
+
+[[questions]]
+question = "What will be the result of `(not (= 5 5))` in Lisp?"
+choices = [
+  "True",
+  "False",
+  "NIL",
+  "None of the above"
+]
+# Answer: Choice 3 (NIL)
+
+[[questions]]
+question = "Which function is used to compare if two numbers are not equal in Lisp?"
+choices = [
+  "!=",
+  "not=",
+  "/=",
+  "None of the above"
+]
+# Answer: Choice 3 (/=)
+
+[[questions]]
+question = "How to calculate the absolute value of -5 in Lisp?"
+choices = [
+  "(abs -5)",
+  "abs(-5)",
+  "|-5|",
+  "None of the above"
+]
+# Answer: Choice 1 (abs -5)
+
+[[questions]]
+question = "What is the prefix notation for the mathematical expression `5 + 3 * 2` in Lisp?"
+choices = [
+  "(+ 5 (* 3 2))",
+  "(+ 5 3 2)",
+  "(5 + 3 * 2)",
+  "None of the above"
+]
+# Answer: Choice 1 (+ 5 (* 3 2))
+
+[[questions]]
+question = "How to declare a variable `x` with value 5 in Lisp?"
+choices = [
+  "(defvar x 5)",
+  "x = 5",
+  "int x = 5",
+  "None of the above"
+]
+# Answer: Choice 1 (defvar x 5)
+
+[[questions]]
+question = "What does the Lisp function `(list 1 2 3 4)` return?"
+choices = [
+  "(1 2 3 4)",
+  "[1, 2, 3, 4]",
+  "1 2 3 4",
+  "None of the above"
+]
+# Answer: Choice 1 (1 2 3 4)
+
+[[questions]]
+question = "Which Lisp function is used to calculate the maximum of two or more numbers?"
+choices = [
+  "max",
+  "maximum",
+  "largest",
+  "None of the above"
+]
+# Answer: Choice 1 (max)
+
+[[questions]]
+question = "How to represent the mathematical expression `2^3` in Lisp, given that there is no direct operator for exponentiation?"
+choices = [
+  "(expt 2 3)",
+  "(^ 2 3)",
+  "(2 ** 3)",
+  "None of the above"
+]
+# Answer: Choice 1 (expt 2 3)
+
+[[questions]]
+question = "What will the Lisp expression `(if (> 5 3) 'yes 'no)` return?"
+choices = [
+  "yes",
+  "no",
+  "True",
+  "None of the above"
+]
+# Answer: Choice 1 (yes)
+
+[[questions]]
+question = "What is the result of the Lisp expression `(round 5.5)`?"
+choices = [
+  "5",
+  "6",
+  "5.0",
+  "None of the above"
+]
+# Answer: Choice 2 (6)
+
+[[questions]]
+question = "Which Lisp function can be used to generate a list of numbers from 1 to 5?"
+choices = [
+  "range",
+  "loop",
+  "list",
+  "None of the above"
+]
+# Answer: Choice 2 (loop)
+
+[[questions]]
+question = "What is the output of the following Lisp code: `(let ((x 5)) (+ x x))`?"
+choices = [
+  "5",
+  "10",
+  "25",
+  "None of the above"
+]
+# Answer: Choice 2 (10)
+
+[[questions]]
+question = "How to comment a line of code in Lisp?"
+choices = [
+  "//",
+  "#",
+  "--",
+  ";"
+]
+# Answer: Choice 4 (;)
+
+[[questions]]
+question = "What is the result of the following Lisp code: `(reduce '+ '(1 2 3 4 5))`?"
+choices = [
+  "15",
+  "10",
+  "5",
+  "None of the above"
+]
+# Answer: Choice 1 (15)
+
+[[questions]]
+question = "What is the correct way to define a function `square` that squares its input in Lisp?"
+choices = [
+  "(defun square (x) (* x x))",
+  "function square(x) { return x * x; }",
+  "square(x) = x * x",
+  "None of the above"
+]
+# Answer: Choice 1 (defun square (x) (* x x))
+
+[[questions]]
+question = "Which of the following is not a data type in Lisp?"
+choices = [
+  "Integer",
+  "Float",
+  "String",
+  "Boolean"
+]
+# Answer: Choice 4 (Boolean)
+
+[[questions]]
+question = "What is the value of `x` after executing the Lisp code `(setq x 10)`?"
+choices = [
+  "0",
+  "10",
+  "x",
+  "None of the above"
+]
+# Answer: Choice 2 (10)
+
+[correct_answers]
+correct_answers = [1, 1, 3, 3, 1, 1, 2, 1, 
+3, 3, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 4, 1, 1, 4, 2]

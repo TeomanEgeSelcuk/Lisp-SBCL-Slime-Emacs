@@ -32,4 +32,4 @@
 (let ((n 4)) ; Change the value of n as needed
   (format t "Number of times the next sum is greater: ~a~%" (SIMULATE-DICE-ROLLS n)))
 
-;; (cg:eval-solutions "" :lab02)
+; (cg:eval-solutions "" :lab02)
