@@ -57,12 +57,15 @@ In the example provided, a structure (or tuple) is created to store information 
    (defstruct movie title director year type)
    ```
    - **Simple Explanation:** A structure called "movie" is created to hold information about movies, with specific spots for the title, director, year, and type.
+   -  **What it does**: This code defines a new data structure named "movie". A "movie" has four properties (or "slots"): title, director, year, and type.
+  
 
 2. **Creating a Movie Instance:** 
    ```lisp
    (make-movie :title "Blade Runner" :director "Ridley Scott")
    ```
    - **Simple Explanation:** A specific movie, "Blade Runner" directed by "Ridley Scott", is being recorded using the previously defined structure. However, the year and type are not provided yet, so they are left empty (NIL).
+   - **What it does**: This creates a new instance of the "movie" structure and sets the "title" to "Title" and the "director" to "Director". The second line creates another instance of the movie and prints it.
 
 3. **Accessing and Modifying Movie Data:**
    ```lisp
@@ -71,6 +74,10 @@ In the example provided, a structure (or tuple) is created to store information 
      (values (movie-title movie) (movie-director movie) (movie-year movie)))
    ```
    - **Simple Explanation:** The year "1982" is added to the movie’s information. Now, all the filled information about the movie, including the title, director, and year, can be accessed and displayed.
+   - **What it does**: This snippet does three things:
+     - Creates a new movie and assigns it to the variable named "var".
+     - Sets the "year" of the movie stored in "var" to 2022.
+     - Returns the title, director, and year of the movie stored in "var".
 
 4. **Checking if a Movie is in Database:**
    ```lisp
@@ -82,6 +89,14 @@ In the example provided, a structure (or tuple) is created to store information 
          (return (aref *db* i)))))
    ```
    - **Simple Explanation:** This is a function to check if a movie with a specific title is in the database. If it finds a movie with the given title, it returns that movie's information; otherwise, it returns NIL (meaning not found).
+   - **What it does**: This snippet sets up a simple movie database and a function to search it.
+     - It declares a variable "size" with a value of 10, representing the size of the database.
+     - It declares a variable "db" as an array of size 10. Think of this as a list of 10 slots where movies can be stored.
+     - It defines a function `in-db?` which:
+       - Takes a "title" as a parameter.
+       - Iterates over the "db" array.
+       - Checks if an entry in the array is a movie and if its title matches the given title.
+       - If it finds a match, it returns that movie.
 
 ### Visual Explanation
 Imagine a shelf (the structure) with different compartments (slots) named for each type of information (title, director, etc.). Each compartment can only contain the type of information it’s labeled for. You can quickly check each compartment to find out all about the movie since they are stored next to each other - that's the advantage of a contiguous structure!

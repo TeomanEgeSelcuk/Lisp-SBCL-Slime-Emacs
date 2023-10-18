@@ -177,5 +177,3 @@ Imagine you have a hand of playing cards and you want to sort them.
 - **Selection Sort:** A simple, in-place sorting algorithm.
 - **Pros:** Easy to understand and implement.
 - **Cons:** Not efficient for large datasets due to its O(n^2) time complexity for comparisons.
-
-
