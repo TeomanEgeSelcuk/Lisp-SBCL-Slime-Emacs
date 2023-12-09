@@ -65,14 +65,14 @@ Syntax:
             (progn
               (rotatef (aref vec (1+ j)) (aref vec j))
               ;; Print the step, indices, comparison, swap status, and the vector
-              (format t "Step ~a: Index i=~a, Index j=~a, Comparison: ~a, Swap: Yes, Vector: ~a~%"
-                      step-counter i j (funcall comp (aref vec (1+ j)) (aref vec j)) vec))
+              (format t "Step ~a: Index i=~a elem i=~a, Index j=~a elem j=~a, Comparison: ~a < ~a, Swap: Yes, Vector: ~a~%"
+                      step-counter i (aref vec i) (1+ j) (aref vec (1+ j)) (aref vec i) (aref vec (1+ j)) vec))
             
             ;; If not, exit the loop
             (progn
               ;; Print the step, indices, comparison, swap status, and the vector
-              (format t "Step ~a: Index i=~a, Index j=~a, Comparison: ~a, Swap: No, Vector: ~a~%"
-                      step-counter i j (funcall comp (aref vec (1+ j)) (aref vec j)) vec)
+              (format t "Step ~a: Index i=~a, Element i=~a, Index j=~a, Element j=~a, Comparison: ~a => ~a, Swap: No, Vector: ~a~%"
+                      step-counter i (aref vec i) (1+ j) (aref vec (1+ j)) (aref vec i) (aref vec (1+ j)) vec)
               (return))))))
 
         ;; Return the sorted vector
@@ -84,4 +84,7 @@ Syntax:
   (setq my-vector (insertion-sort my-vector #'<)) ; Sort the vector
   (format t "Sorted Vector: ~a~%" my-vector))
 
+
 ;; (load "/src/notes/week-4/lec_1.lisp")
+
+
